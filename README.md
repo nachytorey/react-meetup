@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Challenge Meetups by nacho almiron
+La app se basa en la gestión de historias de usuarios. La web permite la creación, eliminación, subscripción y registro de asistencia a reuniones (meetups). La creación de una meetup te permite ver el clima del lugar en la fecha que se planifique, así como también la cantidad de cerveza que deberían comprar para sus invitados. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Como ejecutar la app
+Descargar el proyecto. 
+Ejecutar los comandos npm: 
+    1) npm install
+    2) npm run start
 
-## Available Scripts
+### Autenticación
+A continuación, se adjuntan los nombres de usuarios habilitados a usar el sistema, con sus respectivos roles
 
-In the project directory, you can run:
+nacho - admin
+rodrigo - user
+mauro - admin
+carolina - user
 
-### `npm start`
+### Consideraciones
+1) Si el usuario esta suscripto (es un invitado) no se podra suscribir de nuevo, el boton estará disabled.
+Lo mismo pasa con los checkin
 
-Runs the app in the development mode.\
-Open [https://nachytorey.github.io/react-weather-app/](https://nachytorey.github.io/react-weather-app/) to view it in the browser.
+### Stack tecnologico
+Se desarrolló únicamente la parte de frontend, usando React, Redux y Material UI. Por tal motivo al momento de hacer post se perderan todos las historias guardadas. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Arquitectura 
+La arquitectura implementa el patrón flu, a traves de Redux. La estructura se basa en actions, reducers, selectors, middleware y store. El middleware se encarga de interceptar las peticiones REST y gestionarlas según se requiera. 
 
-### `npm test`
+### Features
+WebApp de reuniones
+React/Redux
+Login/Logout
+Roles
+Multiidioma - i18n
+Test - jtest
+Responsive (mobile firts) - Material UI
+Darkmode
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Ejecutar los test
+Los test de la app se encuentran en el archivo /App.test.js
+Ejecutar el comando npm:
+    1) npm test
