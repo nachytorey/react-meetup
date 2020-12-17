@@ -2,6 +2,7 @@
   "name": "react-santander",
   "version": "0.1.0",
   "private": true,
+  "home": "https://nachytorey.github.io/react-meetup",
   "dependencies": {
     "@date-io/date-fns": "^2.10.6",
     "@material-ui/core": "^4.11.2",
